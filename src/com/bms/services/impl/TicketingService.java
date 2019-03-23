@@ -55,7 +55,7 @@ public class TicketingService implements ITicketingService {
 				}
 			}
 		} else {
-			throw new BMSException("User" + user.getLogin() +" is not logged in! Please login!");
+			throw new BMSException("User: " + user.getLogin() +" is not logged in! Please login!");
 		}
 		return null;
 	}
