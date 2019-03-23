@@ -31,7 +31,6 @@ public class UserSessionMangmentService implements IUserSessionMangmentService {
 			int mins = Integer.parseInt(ConfigUtil.getInstance().getConfigValue(BMSConstants.SESSSION_TIMEOUT_TIME));
 			sessionTimeOut = mins * 60 * 1000;
 		} catch (NumberFormatException | IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		iUserManagementService = UserManagementService.getInsance();

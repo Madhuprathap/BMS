@@ -142,7 +142,7 @@ public class Main {
 
 			// waiting maxSessionTimeOut+1 time so that session is invalidated by SessionTimeOutExecutor
 			Thread.sleep(2*60*1000);
-			System.out.println("Active Sessions: "+iUserSessionMangmentService.getSessions().size()); // size should be 0 as User3 should have logout by executor
+			System.out.println("Active Sessions count: "+iUserSessionMangmentService.getSessions().size()); // size should be 0 as User3 should have logout by executor
 
 		} finally {
 			executorService.shutdownNow();

@@ -12,11 +12,10 @@ import com.bms.utils.ConfigUtil;
 
 public class Screen {
 	private int id;
-	// TODO : Multiple Days no handled
+	// TODO : Multiple Days not handled
 	private Map<String, Seat[][]> moviesPlaying = new HashMap<>();
 	private int noOfSeats;
 	private Show currentRunnigMovie;
-//	private Map<Integer, Movie> givenDayShowsList;
 	
 	public Map<String, Seat[][]> getMoviesPlaying() {
 		return moviesPlaying;
