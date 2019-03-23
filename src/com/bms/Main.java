@@ -125,7 +125,7 @@ public class Main {
 			t2.setName(login1.getLogin());
 			t2.start();
 			
-			//Wait so that Concurrent running thread book the ticket, before we logout
+			//Wait so that Concurrent running threads book the ticket, before we logout
 			Thread.sleep(1000);
 			
 			// logout
