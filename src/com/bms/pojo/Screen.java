@@ -13,6 +13,8 @@ import com.bms.utils.ConfigUtil;
 public class Screen {
 	private int id;
 	// TODO : Multiple Days not handled
+	// <Day, <Movie Title, List<seats status>>> --> Should handle multiple days and different types of seats
+	// <Movie Title, seats status>
 	private Map<String, Seat[][]> moviesPlaying = new HashMap<>();
 	private int noOfSeats;
 	private Show currentRunnigMovie;
