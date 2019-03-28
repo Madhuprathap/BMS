@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.stream.IntStream;
 
 import com.bms.exceptions.BMSException;
 import com.bms.pojo.Screen;
@@ -43,9 +44,7 @@ public class Main {
 
 			// User DataSeed
 			IUserManagementService iUserManagementService = UserManagementService.getInsance();
-			for (int i = 1; i <= 10; i++) {
-				iUserManagementService.createUser("User"+i, "Admin123");
-			}
+			IntStream.range(1, 11).forEach(i -> iUserManagementService.createUser("User"+i, "Admin123"));
 
 			// Theaters/Screens/Shows/Seats DataSeed
 			// Can implement Factory methods using factory pattern

@@ -3,10 +3,12 @@ package com.bms.userManagment;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
+
 import com.bms.pojo.User;
 
 public class UserManagementService implements IUserManagementService {
-
+	final static Logger logger = Logger.getLogger(UserManagementService.class);
 	//Singleton
 	private UserManagementService() {
 
@@ -23,6 +25,7 @@ public class UserManagementService implements IUserManagementService {
 	public User createUser(String login, String password) {
 		User user = new User(login, password);
 		users.put(user.getLogin(), user);
+		logger.info("user " + login + " created!");
 		return user;
 	}
 
